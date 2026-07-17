@@ -6,8 +6,8 @@ import {
   FieldError,
   FieldGroup,
   FieldLabel,
-} from "../../../components/ui/field";
-import { Input } from "../../../components/ui/input";
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
 import { Link } from "react-router";
 
 const RegisterForm = () => {

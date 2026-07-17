@@ -1,17 +1,17 @@
 import { Navigate, Route, Routes } from "react-router";
 
-import MainLayout from "./layouts/MainLayout";
-import AuthLayout from "./layouts/AuthLayout";
+import MainLayout from "@/layouts/MainLayout";
+import AuthLayout from "@/layouts/AuthLayout";
 
-import RegisterPage from "./modules/auth/pages/RegisterPage";
-import LoginPage from "./modules/auth/pages/LoginPage";
-import LecturerHomePage from "./modules/lectures/pages/LecturerHomePage";
-import ApplicantHomePage from "./modules/applicants/pages/ApplicantHomePage";
-import StudentHomePage from "./modules/students/pages/StudentHomePage";
+import RegisterPage from "@/modules/auth/pages/RegisterPage";
+import LoginPage from "@/modules/auth/pages/LoginPage";
+import LecturerHomePage from "@/modules/lectures/pages/LecturerHomePage";
+import ApplicantHomePage from "@/modules/applicants/pages/ApplicantHomePage";
+import StudentHomePage from "@/modules/students/pages/StudentHomePage";
 
-import ApplicantLayout from "./layouts/ApplicantLayout";
-import StudentLayout from "./layouts/StudentLayout";
-import LecturerLayout from "./layouts/LecturerLayout";
+import ApplicantLayout from "@/layouts/ApplicantLayout";
+import StudentLayout from "@/layouts/StudentLayout";
+import LecturerLayout from "@/layouts/LecturerLayout";
 
 
 const App = () => {

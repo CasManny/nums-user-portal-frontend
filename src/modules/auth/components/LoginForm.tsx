@@ -8,8 +8,8 @@ import {
   FieldError,
   FieldGroup,
   FieldLabel,
-} from "../../../components/ui/field";
-import { Input } from "../../../components/ui/input";
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
 
 const LoginForm = () => {
   const form = useForm<LoginUserType>({

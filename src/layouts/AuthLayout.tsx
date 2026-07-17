@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import loginImage from "@/assets/Login-image.png";
 
 const AuthLayout = () => {
   return (
@@ -20,7 +21,7 @@ const AuthLayout = () => {
               <div className="w-full bg-white">
                 <div className="flex flex-col items-center justify-center w-full">
                   <img
-                    src="/src/assets/Login-image.png"
+                    src={loginImage}
                     alt="School Logo"
                     className="mb-8 h-50 w-auto object-contain"
                   />
