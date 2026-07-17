@@ -18,7 +18,7 @@ const RegisterForm = () => {
       password: "",
       phoneNumber: "",
       fullName: "",
-      gender: "MALE",
+      gender: "M",
       address: "",
       dateOfBirth: undefined,
     },
