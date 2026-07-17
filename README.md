@@ -1,75 +1,204 @@
-# React + TypeScript + Vite
+# 🎓 Nexus University Management System (NUMS) Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **Nexus University Management System (NUMS)** is a modern web application designed to digitize and streamline university operations. This frontend provides an intuitive and responsive user interface for applicants, students, lecturers, and administrators to interact with the university management platform.
 
-Currently, two official plugins are available:
+The project is built with modern web technologies to deliver a fast, scalable, and maintainable user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Applicant Portal
 
-## Expanding the ESLint configuration
+* Applicant registration
+* Secure authentication
+* Admission application
+* Application status tracking
+* Profile management
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Student Portal
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Secure login
+* Student dashboard
+* Course registration
+* Fee payment
+* Academic results
+* Transcript requests
+* Profile management
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Lecturer Portal
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Secure login
+* Course management
+* Student grading
+* Result submission
+* Class management
 
-```
+### Administrator Portal
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* Student management
+* Lecturer management
+* Faculty and department management
+* Course management
+* Admission management
+* Academic session management
+* System administration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Tech Stack
+
+* React
+* Vite
+* TypeScript
+* React Router
+* React Hook Form
+* Zod
+* Tailwind CSS
+* TanStack Query 
+* Axios
+
+---
+
+# Project Structure
 
 ```
+src/
+│
+├── assets/
+├── components/
+├── layouts/
+├── modules/
+│   ├── auth/
+│   ├── applicants/
+│   ├── students/
+│   ├── lecturers/
+│   └── admin/
+│
+├── routes/
+├── services/
+├── hooks/
+├── lib/
+├── utils/
+└── main.tsx
+```
+
+---
+
+#  Getting Started
+
+## Clone the repository
+
+```bash
+git clone https://github.com/CasManny/nums-user-portal-frontend.git
+```
+
+```bash
+cd nums-user-portal-frontend
+```
+
+## Install dependencies
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn
+```
+
+## Start the development server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+#  Build for Production
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+VITE_API_BASE_URL=http://localhost:8080/api/v1
+```
+
+Adjust the API URL according to your backend environment.
+
+---
+
+# Project Goals
+
+NUMS aims to provide a centralized platform that simplifies university operations by:
+
+* Improving the admission process
+* Digitizing student records
+* Streamlining course registration
+* Simplifying fee management
+* Supporting academic result processing
+* Enhancing communication between students, lecturers, and administrators
+
+---
+
+# Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+
+```bash
+git checkout -b feature/my-feature
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Add my feature"
+```
+
+4. Push your branch.
+
+```bash
+git push origin feature/my-feature
+```
+
+5. Open a Pull Request.
+
+---
+
+## Future Roadmap
+
+* Applicant workflow
+* Student dashboard
+* Lecturer dashboard
+* Administrator dashboard
+* Payment integration
+* Notifications
+* Transcript generation
+* Dark mode
+* Accessibility improvements
+* Progressive Web App (PWA)
+* Mobile application
