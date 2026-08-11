@@ -12,6 +12,11 @@ import StudentHomePage from "@/modules/students/pages/StudentHomePage";
 import ApplicantLayout from "@/layouts/ApplicantLayout";
 import StudentLayout from "@/layouts/StudentLayout";
 import LecturerLayout from "@/layouts/LecturerLayout";
+import ApplicationPage from "./modules/applicants/pages/ApplicationPage";
+import ApplicationSlipPage from "./modules/applicants/pages/ApplicationSlipPage";
+import ProfilePage from "./modules/applicants/pages/ProfilePage";
+import SettingsPage from "./modules/applicants/pages/SettingsPage";
+import DocumentsPage from "./modules/applicants/pages/DocumentsPage";
 
 
 const App = () => {
@@ -32,6 +37,11 @@ const App = () => {
         {/* Applicant */}
         <Route path="applicants" element={<ApplicantLayout />}>
           <Route index element={<ApplicantHomePage />} />
+          <Route path="application" element={<ApplicationPage />} />
+          <Route path="application-slip" element={<ApplicationSlipPage />} />
+          <Route path="profile" element={<ProfilePage />} />
+          <Route path="settings" element={<SettingsPage />} />
+          <Route path="documents" element={<DocumentsPage />} />
         </Route>
 
         {/* Student */}

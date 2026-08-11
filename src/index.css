@@ -94,6 +94,10 @@
   --sidebar-border: oklch(0.922 0 0);
 
   --sidebar-ring: oklch(0.708 0 0);
+  
+  --nexus-primary: #0C1835;
+  --nexus-accent: #C79A2B;
+  --nexus-background: #F8FAFC;
 }
 
 @theme inline {
@@ -110,6 +114,9 @@
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
+  --color-nexus-primary: var(--nexus-primary);
+  --color-nexus-accent: var(--nexus-accent);
+  --color-nexus-background: var(--nexus-background);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
@@ -182,6 +189,7 @@
   }
   html {
     @apply font-sans;
+    height: 100%;
   }
 }
 
@@ -192,4 +200,15 @@
 
 .scrollbar-none::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  body {
+    background: white !important;
+  }
 }

@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import { Link } from "react-router";
+import { useNavigate } from "react-router";
 
 import { LoginUserSchema, type LoginUserType } from "../schemas";
 import {
@@ -10,8 +11,10 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import CustomButton from "@/components/shared/CustomButton";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const form = useForm<LoginUserType>({
     resolver: zodResolver(LoginUserSchema),
     defaultValues: {
@@ -22,6 +25,7 @@ const LoginForm = () => {
 
   const onSubmit = (data: LoginUserType) => {
     console.log("Login Data:", data);
+    navigate("/applicants");
   };
 
   return (
@@ -81,12 +85,7 @@ const LoginForm = () => {
 
           {/* Submit */}
           <div className="space-y-3 pt-2">
-            <button
-              type="submit"
-              className="h-10 w-full rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Sign In
-            </button>
+            <CustomButton variant={"primary"}>Sign In</CustomButton>
 
             <p className="text-center text-sm text-muted-foreground">
               New applicant?{" "}

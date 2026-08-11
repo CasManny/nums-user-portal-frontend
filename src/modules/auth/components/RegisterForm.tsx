@@ -8,9 +8,11 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import CustomButton from "@/components/shared/CustomButton";
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
   const form = useForm<RegisterUserType>({
     resolver: zodResolver(RegisterUserSchema),
     defaultValues: {
@@ -26,6 +28,7 @@ const RegisterForm = () => {
 
   const onSubmit = (data: RegisterUserType) => {
     console.log("Form Data Submitted:", data);
+    navigate("/applicants");
   };
 
   return (
@@ -191,12 +194,7 @@ const RegisterForm = () => {
 
           {/* Submit Button */}
           <div className="w-full space-y-2">
-            <button
-              type="submit"
-              className="w-full mt-4 bg-primary text-primary-foreground h-10 px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors"
-            >
-              Register
-            </button>
+            <CustomButton variant={"primary"}>Sign In</CustomButton>
             <p className="mb-6 text-sm text-center text-muted-foreground">
               Already have a university account?{" "}
               <Link

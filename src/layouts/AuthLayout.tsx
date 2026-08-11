@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import loginImage from "@/assets/Login-image.png";
+import standingStudent from "@/assets/student-standing.png"
 
 const AuthLayout = () => {
   return (
@@ -9,7 +10,7 @@ const AuthLayout = () => {
           {/* Left Side */}
           <div className="hidden  lg:flex items-end justify-center overflow-hidden">
             <img
-              src="/src/assets/student-standing.png"
+              src={standingStudent}
               alt="University Students"
               className="h-[95%] w-auto object-contain"
             />
